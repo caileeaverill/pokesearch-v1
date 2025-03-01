@@ -1,0 +1,42 @@
+export const typeColor = {
+    normal: '#A8A77A',
+    fire: '#EE8130',
+    water: '#6390F0',
+    electric: '#F7D02C',
+    grass: '#7AC74C',
+    ice: '#96D9D6',
+    fighting: '#C22E28',
+    poison: '#A33EA1',
+    ground: '#E2BF65',
+    flying: '#A98FF3',
+    psychic: '#F95587',
+    bug: '#A6B91A',
+    rock: '#B6A136',
+    ghost: '#735797',
+    dragon: '#6F35FC',
+    dark: '#705746',
+    steel: '#B7B7CE',
+    fairy: '#D685AD',
+};
+
+export const typeColorAccents = {
+    normal: "#7c7b59",
+    fire: "#b15e21",
+    water: "#476ab2",
+    electric: "#b79a1e",
+    grass: "#599336",
+    ice: "#6ea19e",
+    fighting: "#8f1f1b",
+    poison: "#782b76",
+    ground: "#a88d49",
+    flying: "#7c69b4",
+    psychic: "#b93d63",
+    bug: "#7a8910",
+    rock: "#867625",
+    ghost: "#543e6f",
+    dragon: "#5125bb",
+    dark: "#513e32",
+    steel: "#878798",
+    fairy: "#9e617f"
+};
+

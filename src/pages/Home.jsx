@@ -1,19 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import SuggestedSearches from '../components/SuggestedSearches/SuggestedSearches';
+import { PiDna, PiMagnifyingGlass, PiFire } from "react-icons/pi";
 
 const suggestedSearches = [
     {
         title: 'Search by Name',
         description: 'Find your favorite Pokémon by name or nickname',
+        icon: <PiMagnifyingGlass />
     },
     {
         title: 'Search by Generation',
         description: 'Discover Pokémon from every era, from Kanto to Paldea',
+        icon: <PiDna />
 
     },
     {
         title: 'Search by Type',
         description: 'Find Pokémon by their elemental power—Fire, Water, Electric, and more',
+        icon: <PiFire />
     }
 ];
 
@@ -37,6 +41,7 @@ export default function Home() {
                         key={index}
                         index={index}
                         title={item.title}
+                        icon={item.icon}
                         description={item.description}
                     />
                 ))}

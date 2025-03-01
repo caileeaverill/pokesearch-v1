@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export default function SuggestedSearches({ title, description, index }) {
+export default function SuggestedSearches({ title, description, index, icon }) {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -12,7 +12,7 @@ export default function SuggestedSearches({ title, description, index }) {
         <div
             className={`flex flex-col text-white bg-neutral-900 p-6 basis-1/3 ${isVisible ? 'opacity-100 transition-opacity duration-2000' : 'opacity-0 transition-opacity duration-1500'}`}
             style={{ transform: `translateY(-${index * 45}px)` }}>
-            <p>{index}</p>
+            <p>{icon}</p>
             <h2 className='text-2xl font-bold flex-grow py-40'>{title}</h2>
             <p className='mt-auto text-sm'>{description}</p>
         </div>

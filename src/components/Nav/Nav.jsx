@@ -7,8 +7,8 @@ export default function Nav() {
             <h2 className="text-white text-2xl font-bold">PokéSearch</h2>
             <div className="flex gap-4">
                 <Link to="/" className="text-white hover:underline">Home</Link>
-                <Link to="/about" className="text-white hover:underline">About</Link>
                 <Link to="/results" className="text-white hover:underline">Results</Link>
+                <Link to="/about" className="text-white hover:underline">About</Link>
             </div>
         </nav>
     );

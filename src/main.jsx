@@ -1,13 +1,10 @@
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { BrowserRouter } from "react-router";
-import { Routes, Route } from "react-router-dom";
-import Home from './pages/Home.jsx'
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";  // ✅ Use react-router-dom
+import "./index.css";
+import MainNav from "./components/Nav/NavRoutes";  // ✅ Import MainNav (handles routes)
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home />} />
-    </Routes>
+    <MainNav />
   </BrowserRouter>
-)
+);

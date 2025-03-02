@@ -7,7 +7,7 @@ import Nav from '../components/Nav/Nav'; // Your navigation component
 export default function AppRoutes() {
     return (
         <>
-            <Nav /> {/* Navigation bar */}
+            <Nav />
             <Routes>
                 <Route path="/" element={<Home />} /> {/* Home route */}
                 <Route path="/about" element={<Home />} /> {/* About route */}

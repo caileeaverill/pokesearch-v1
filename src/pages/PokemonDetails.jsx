@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import PokedexDataCard from '../components/Cards/PokedexDataCard';
+import SpriteCard from '../components/Cards/SpriteCard';
 
 export default function PokemonDetail() {
     const { name } = useParams();
@@ -13,13 +15,10 @@ export default function PokemonDetail() {
 
     if (!pokemon) return <p className="text-white">Loading...</p>;
 
-    console.log('hello')
-
     return (
-        <div className="text-white p-6">
-            <h1 className="capitalize text-3xl mb-4">{pokemon.name}</h1>
-            <p>{`#${pokemon.id}`}</p>
-            <img src={pokemon.sprites.other['official-artwork'].front_default} alt={pokemon.name} />
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 text-white">
+            <PokedexDataCard pokemon={pokemon} />
+            <SpriteCard pokemon={pokemon} />
         </div>
     );
 }

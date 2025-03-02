@@ -64,7 +64,7 @@ export default function SearchResults() {
         }, [pokemonData]);
 
         return (
-            <div className="flex gap-4 flex-wrap justify-center mt-24">
+            <div className="flex gap-4 flex-wrap justify-center">
                 {isLoading ? (
                     <Loader loadedCount={loadedCount} totalCount={numOfCards} />
                 ) : (

@@ -42,7 +42,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+  /* display: flex; */
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -72,6 +72,42 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.loader {
+  animation: l20 1s infinite cubic-bezier(0.5, 120, 0.5, -120);
+}
+
+@keyframes l20 {
+
+  30%,
+  70% {
+    transform: rotate(0deg)
+  }
+
+  49.99% {
+    transform: rotate(0.2deg)
+  }
+
+  50% {
+    transform: rotate(-0.2deg)
+  }
+}
+
+@keyframes l20 {
+
+  30%,
+  70% {
+    transform: rotate(0deg)
+  }
+
+  49.99% {
+    transform: rotate(0.2deg)
+  }
+
+  50% {
+    transform: rotate(-0.2deg)
+  }
 }
 
 @media (prefers-color-scheme: light) {

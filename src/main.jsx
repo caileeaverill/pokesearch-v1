@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";  // ✅ Use react-router-dom
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
-import MainNav from "./components/Nav/NavRoutes";  // ✅ Import MainNav (handles routes)
+import MainNav from "./components/Nav/NavRoutes";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>

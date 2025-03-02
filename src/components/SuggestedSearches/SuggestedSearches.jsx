@@ -10,7 +10,7 @@ export default function SuggestedSearches({ title, description, index, icon }) {
 
     return (
         <div
-            className={`flex flex-col text-white bg-neutral-900 p-6 basis-1/3 ${isVisible ? 'opacity-100 transition-opacity duration-2000' : 'opacity-0 transition-opacity duration-1500'}`}
+            className={`flex flex-col text-white bg-neutral-900 p-4 basis-1/3 ${isVisible ? 'opacity-100 transition-opacity duration-2000' : 'opacity-0 transition-opacity duration-1500'}`}
             style={{ transform: `translateY(-${index * 45}px)` }}>
             <p>{icon}</p>
             <h2 className='text-2xl font-bold flex-grow py-40'>{title}</h2>

@@ -1,9 +1,16 @@
 import React from "react";
+import img from '../../../public/images/pokeball.svg'
 
-export default function Loader() {
+const Loader = ({ loadedCount, totalCount }) => {
     return (
-        <div>
-            <img src="../images/pokeball.gif" alt="" />
+        <div className="flex flex-col items-center">
+            <div className="loader">
+                <img className="h-full w-full" src={img} alt="Image of pokeball" />
+
+            </div>
+            <p className="text-white">{`${loadedCount} / ${totalCount} cards loaded`}</p>
         </div>
     );
 }
+
+export default Loader;

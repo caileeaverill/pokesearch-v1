@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { fetchPokemonData, fetchPokemonSpecies } from '../services/fetch';
 import { setPokemonCardStyles } from "../utils/helpers"
 import Loader from '../components/Loader/Loader';
-import SearchResultCard from '../components/Cards/SearchResultsCard/SearchResultCard';
+import SearchResultCard from '../components/Cards/SearchResultCard';
 
 export default function SearchResults() {
     {
@@ -12,7 +12,7 @@ export default function SearchResults() {
         const [error, setError] = useState(null);
         const [loadedCount, setLoadedCount] = useState(0);
 
-        const numOfCards = 100;
+        const numOfCards = 30;
 
         useEffect(() => {
             const fetchData = async () => {

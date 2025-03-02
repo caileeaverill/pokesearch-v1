@@ -82,7 +82,7 @@ button.default:focus-visible {
   animation: l20 1s infinite cubic-bezier(0.5, 120, 0.5, -120);
 }
 
-nav+div {
+#root {
   padding-top: 6rem;
 }
 

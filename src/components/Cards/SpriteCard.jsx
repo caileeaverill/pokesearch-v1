@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function SpriteCard({ pokemon }) {
+export default function SpriteCard({ pokemon, className = "" }) {
     const [imageWidth, setImageWidth] = useState(null);
 
     const handleImageLoad = (e) => {
@@ -40,7 +40,7 @@ export default function SpriteCard({ pokemon }) {
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     return (
-        <div className='bg-neutral-900 p-4 flex'>
+        <div className={`bg-neutral-900 p-4 flex ${className}`}>
             <div className='flex flex-col justify-center gap-4 pr-8 mr-8 border-r-1 border-neutral-800'>
                 {chosenSpritesKeys.map((key, index) => (
                     <div key={index} className="flex flex-col items-start">

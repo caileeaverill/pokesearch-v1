@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function StatsCard({ pokemon }) {
+export default function StatsCard({ pokemon, className = "" }) {
     const colorClass = {
         hp: 'bg-[#69DC12]',
         attack: 'bg-[#EFCC18]',
@@ -42,7 +42,7 @@ export default function StatsCard({ pokemon }) {
     }, [pokemon.stats]);
 
     return (
-        <div className="bg-neutral-900 p-4">
+        <div className={`bg-neutral-900 p-4 ${className}`}>
             <div className="flex flex-col gap-4 items-center">
                 {pokemon.stats.map((stat, index) => {
                     const statType = stat.stat.name.toLowerCase().replace(/-/g, '_');

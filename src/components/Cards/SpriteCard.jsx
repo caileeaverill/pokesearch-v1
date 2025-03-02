@@ -3,18 +3,26 @@ import React, { useState } from 'react';
 export default function SpriteCard({ pokemon }) {
     const [imageWidth, setImageWidth] = useState(null);
 
-    const handleImageLoad = (event) => {
-        setImageWidth(event.target.naturalWidth); // Capture the image's natural width
+    const handleImageLoad = (e) => {
+        setImageWidth(e.target.naturalWidth);
     };
 
     const chosenSprites = [
         {
-            key: "Default",
+            key: "Official Artwork",
+            value: pokemon.sprites.other['official-artwork'].front_default
+        },
+        {
+            key: "Regular",
             value: pokemon.sprites.front_default
         },
         {
             key: "Shiny",
             value: pokemon.sprites.front_shiny
+        },
+        {
+            key: "Showdown",
+            value: pokemon.sprites.other.showdown.front_default
         },
         {
             key: "Dream World",
@@ -23,14 +31,6 @@ export default function SpriteCard({ pokemon }) {
         {
             key: "Home",
             value: pokemon.sprites.other.home.front_default
-        },
-        {
-            key: "Official Artwork",
-            value: pokemon.sprites.other['official-artwork'].front_default
-        },
-        {
-            key: "Showdown",
-            value: pokemon.sprites.other.showdown.front_default
         }
     ];
 
@@ -43,13 +43,12 @@ export default function SpriteCard({ pokemon }) {
         <div className='bg-neutral-900 p-4 flex'>
             <div className='flex flex-col justify-center gap-4 pr-8 mr-8 border-r-1 border-neutral-800'>
                 {chosenSpritesKeys.map((key, index) => (
-                    <div className="flex flex-col items-start">
+                    <div key={index} className="flex flex-col items-start">
                         <button
-                            key={index}
                             className={`relative opacity-70 hover:opacity-100 transition-all duration-300 ${index === selectedIndex ? "opacity-100" : ""} w-auto`}
                             onClick={() => setSelectedIndex(index)}
                         >
-                            <span className="text-left">{key}</span>
+                            <h6 className="text-left">{key}</h6>
                             {index === selectedIndex && (
                                 <span className="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-white rounded-full transition-all duration-300"></span>
                             )}

@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import { fetchPokemonData, fetchPokemonSpecies } from '../services/fetch';
-import { setPokemonCardStyles } from "../utils/helpers"
 import Loader from '../components/Loader/Loader';
 import SearchResultCard from '../components/Cards/SearchResultCard';
 
@@ -17,7 +16,7 @@ export default function SearchResults() {
         useEffect(() => {
             const fetchData = async () => {
                 try {
-                    const startingIdIndex = 1;
+                    const startingIdIndex = 100;
                     const combinedData = [];
 
                     for (let i = 0; i < numOfCards; i++) {
@@ -44,24 +43,6 @@ export default function SearchResults() {
 
             fetchData();
         }, []);
-
-        useEffect(() => {
-            const applyTypeStyling = () => {
-                pokemonData.forEach((pokemon) => {
-                    if (pokemon.pokemon.types.length > 0) {
-                        const type = pokemon.pokemon.types[0].type.name;
-                        const pokemonCardElements = document.querySelectorAll(
-                            `.pokemon__grid_card.${type}`
-                        );
-                        pokemonCardElements.forEach((element) => {
-                            setPokemonCardStyles(type, element);
-                        });
-                    }
-                });
-            };
-
-            applyTypeStyling();
-        }, [pokemonData]);
 
         return (
             <div className="flex gap-4 flex-wrap justify-center">

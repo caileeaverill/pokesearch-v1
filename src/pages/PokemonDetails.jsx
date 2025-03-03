@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import PokedexDataCard from '../components/Cards/PokedexDataCard';
-import SpriteCard from '../components/Cards/SpriteCard';
-import StatsCard from '../components/Cards/StatsCard';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { PokemonProvider } from "../context/PokemonContext"; // Import the context provider
+
+import PokedexDataCard from "../components/Cards/PokedexDataCard";
+import SpritesCard from "../components/Cards/SpritesCard";
+import StatsCard from "../components/Cards/StatsCard";
+import GameAppearancesCard from "../components/Cards/GameApperancesCard";
+import PhysicalAttributesCard from "../components/Cards/PhysicalAttributesCard";
 
 export default function PokemonDetail() {
     const { name } = useParams();
@@ -10,21 +14,28 @@ export default function PokemonDetail() {
 
     useEffect(() => {
         fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
-            .then(response => response.json())
-            .then(data => setPokemon(data));
+            .then((response) => response.json())
+            .then((data) => setPokemon(data));
     }, [name]);
 
     if (!pokemon) return <p className="text-white">Loading...</p>;
 
     return (
-        <>
-            <h1 className='text-3xl font-bold text-white capitalize mb-8'>{`#${pokemon.id} - ${pokemon.name}`}</h1>
-            <div className="grid grid-cols-3 gap-4 text-white md:grid-cols-[1.5fr_1.5fr] lg:grid-cols-[1.5fr_1.5fr_2fr_1fr]">
-                <PokedexDataCard pokemon={pokemon} className="col-span-3 md:col-span-1 lg:col-span-1" />
-                <StatsCard pokemon={pokemon} className="col-span-3 md:col-span-1 lg:col-span-1" />
-                <SpriteCard pokemon={pokemon} className="col-span-3 lg:col-span-2" />
-                <SpriteCard pokemon={pokemon} className="col-span-3 lg:col-span-1" />
+        <PokemonProvider pokemon={pokemon}>
+            <h1 className="text-3xl font-bold text-white capitalize mb-8">
+                {`#${pokemon.id} - ${pokemon.name}`}
+            </h1>
+
+            <div className="grid gap-4 text-white md:grid-cols-4 auto-rows-auto">
+                {/* Row 1: Pokedex (25%) & Sprites (75%) */}
+                <SpritesCard className="col-span-4 md:col-span-2" />
+                <StatsCard className="col-span-4 md:col-span-2" />
+
+                {/* Row 2: Stats (33%), Game Appearances (33%) Physical Attributes (33%) */}
+                <PokedexDataCard className="col-span-4 md:col-span-1" />
+                <GameAppearancesCard className="col-span-4 md:col-span-1" />
+                <PhysicalAttributesCard className="col-span-4 md:col-span-1" />
             </div>
-        </>
+        </PokemonProvider>
     );
 }

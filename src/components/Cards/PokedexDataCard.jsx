@@ -1,14 +1,15 @@
-import React from 'react'
-import { setPokemonTypeStyles } from '../../utils/helpers'
+import React from "react";
+import { usePokemon } from "../../context/PokemonContext";
+import { setPokemonTypeStyles } from "../../utils/helpers";
 
-export default function PokedexDataCard({ pokemon, className = "" }) {
+export default function PokedexDataCard({ className = "" }) {
+    const pokemon = usePokemon();
 
-    console.log(pokemon)
-
+    if (!pokemon) return null;
 
     return (
         <div className={`bg-neutral-900 p-4 ${className}`}>
-            <div className='flex items-center justify-between'>
+            <div className="flex items-center justify-between">
                 <div className="flex gap-2">
                     {pokemon.types.map((type, index) => {
                         const bgColor = setPokemonTypeStyles(type.type.name);
@@ -30,5 +31,5 @@ export default function PokedexDataCard({ pokemon, className = "" }) {
                 </div>
             </div>
         </div>
-    )
+    );
 }

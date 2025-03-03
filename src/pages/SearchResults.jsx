@@ -16,7 +16,7 @@ export default function SearchResults() {
         useEffect(() => {
             const fetchData = async () => {
                 try {
-                    const startingIdIndex = 100;
+                    const startingIdIndex = 250;
                     const combinedData = [];
 
                     for (let i = 0; i < numOfCards; i++) {

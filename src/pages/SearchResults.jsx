@@ -11,12 +11,12 @@ export default function SearchResults() {
         const [error, setError] = useState(null);
         const [loadedCount, setLoadedCount] = useState(0);
 
-        const numOfCards = 30;
+        const numOfCards = 15;
 
         useEffect(() => {
             const fetchData = async () => {
                 try {
-                    const startingIdIndex = 250;
+                    const startingIdIndex = 1;
                     const combinedData = [];
 
                     for (let i = 0; i < numOfCards; i++) {

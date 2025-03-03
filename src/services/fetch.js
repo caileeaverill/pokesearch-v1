@@ -5,7 +5,7 @@ const handleError = (error) => {
     throw error;
 };
 
-const fetchEndpointData = async (endpoint) => {
+export const fetchEndpointData = async (endpoint) => {
     try {
         // console.log(endpoint)
         const data = await fetchData(endpoint);

@@ -1,10 +1,10 @@
 import { createContext, useContext } from "react";
 
-const PokemonContext = createContext(null); // Ensure default value is null to avoid errors
+const PokemonContext = createContext(null);
 
-export const PokemonProvider = ({ pokemon, children }) => {
+export const PokemonProvider = ({ pokemonData, speciesData, children }) => {
     return (
-        <PokemonContext.Provider value={pokemon}>
+        <PokemonContext.Provider value={{ pokemon: pokemonData, species: speciesData }}>
             {children}
         </PokemonContext.Provider>
     );

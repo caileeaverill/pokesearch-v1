@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { usePokemon } from "../../context/PokemonContext";
 
 export default function StatsCard({ className = "" }) {
-    const pokemon = usePokemon();
+
+    const { pokemon } = usePokemon();
+
     const colorClass = {
         hp: "bg-[#69DC12]",
         attack: "bg-[#EFCC18]",

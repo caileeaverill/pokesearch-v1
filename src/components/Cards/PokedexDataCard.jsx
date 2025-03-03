@@ -3,7 +3,7 @@ import { usePokemon } from "../../context/PokemonContext";
 import { setPokemonTypeStyles } from "../../utils/helpers";
 
 export default function PokedexDataCard({ className = "" }) {
-    const pokemon = usePokemon();
+    const { pokemon } = usePokemon();
 
     if (!pokemon) return null;
 

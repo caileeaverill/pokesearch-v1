@@ -30,7 +30,7 @@ export default function Home() {
     }, []);
 
     return (
-        <div className='flex items-center gap-4 text-white mt-20'>
+        <div className='flex items-center gap-4 text-white mt-25'>
             <div className={`flex flex-col gap-4 basis-1/3 ${isTextVisible ? 'opacity-100 transition-opacity duration-2000' : 'opacity-0 transition-opacity duration-1500'}`}>
                 <h1 className='text-3xl font-bold'>Catch 'Em All, Know 'Em All!</h1>
                 <p>Catch ’em all and learn everything about them! Your ultimate Pokédex powered by the Pokémon API.</p>

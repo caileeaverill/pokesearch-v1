@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { usePokemon } from "../../context/PokemonContext";
 
 export default function SpriteCard({ className = "" }) {
-    const pokemon = usePokemon();
+    const { pokemon } = usePokemon();
     const [imageWidth, setImageWidth] = useState(null);
     const [selectedIndex, setSelectedIndex] = useState(0);
 

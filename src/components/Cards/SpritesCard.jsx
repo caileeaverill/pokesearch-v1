@@ -65,7 +65,7 @@ export default function SpriteCard({ className = "" }) {
                 {spriteValues.length > 0 ? (
                     <img
                         key={selectedIndex}
-                        className={`transition-all duration-300 opacity-100 object-contain ${imageWidth < 250 ? "group-hover:scale-250" : ""
+                        className={`transition-all duration-300 opacity-100 object-contain ${imageWidth < 200 ? "group-hover:scale-250" : ""
                             }`}
                         src={spriteValues[selectedIndex]}
                         alt={pokemon.name}

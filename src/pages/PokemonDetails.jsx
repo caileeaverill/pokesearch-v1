@@ -41,6 +41,7 @@ export default function PokemonDetail() {
                 {`#${pokemon.id} - ${pokemon.name}`}
             </h1>
             <div className="grid gap-4">
+
                 <div className="grid gap-4 text-white grid-cols-1 md:grid-cols-2">
                     <SpritesCard className="col-span-1" />
                     <div>
@@ -49,7 +50,7 @@ export default function PokemonDetail() {
                     </div>
                 </div>
 
-                <div className="grid gap-4 text-white grid-cols-2 lg:grid-cols-2">
+                <div className="grid gap-4 text-white grid-cols-3 lg:grid-cols-2">
                     <StatsCard className="col-span-1" />
                     <TypeCard className="col-span-1 lg:col-span-1" />
                 </div>

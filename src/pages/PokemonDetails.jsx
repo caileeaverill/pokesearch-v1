@@ -4,7 +4,7 @@ import { PokemonProvider } from "../context/PokemonContext";
 import { fetchEndpointData } from "../services/fetch";
 import Loader from "../components/Loader/Loader";
 
-import GameAppearancesCard from "../components/Cards/GameApperancesCard"
+import GameAppearanceCard from "../components/Cards/GameAppearanceCard"
 import TypeCard from "../components/Cards/TypeCard";
 import SpritesCard from "../components/Cards/SpritesCard";
 import StatsCard from "../components/Cards/StatsCard";
@@ -78,7 +78,7 @@ export default function PokemonDetail() {
 
                 <div className="grid gap-4 text-white grid-cols-1 md:grid-cols-2">
                     <SpritesCard className="col-span-1" />
-                    <GameAppearancesCard className="col-span-1" />
+                    <GameAppearanceCard className="col-span-1" />
                 </div>
 
                 <div className="grid gap-4 text-white grid-cols-1 lg:grid-cols-4">

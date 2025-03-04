@@ -1,4 +1,4 @@
-import { typeColor, typeChart } from "../data/constants";
+import { typeColor, typeChart, gameVersionColors } from "../data/constants";
 import { GiBiceps, GiBrokenBone, GiShieldImpact, GiBrokenShield } from "react-icons/gi";
 
 export const setPokemonTypeStyles = (pokemonType) => {
@@ -46,3 +46,8 @@ export const getRelationshipIcon = (category) => {
             return GiBiceps;
     }
 };
+
+export const setPokemonGameVersionStyles = (gameVersion) => {
+    return gameVersionColors[gameVersion.toLowerCase()] || "#777"; // Default gray if game version not found
+};
+

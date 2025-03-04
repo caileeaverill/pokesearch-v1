@@ -152,3 +152,38 @@ export const typeChart = {
         vulnerableTo: ["Poison", "Steel"],
     }
 };
+
+export const gameVersionColors = {
+    red: "#DA3914",
+    blue: "#2E50D8",
+    green: "#24A724",
+    yellow: "",
+    gold: "",
+    silver: "",
+    crystal: "",
+    ruby: "",
+    sapphire: "",
+    emerald: "",
+    firered: "",
+    leafgreen: "",
+    diamond: "",
+    pearl: "",
+    platinum: "",
+    heartgold: "",
+    soulsilver: "",
+    black: "",
+    white: "",
+    black2: "",
+    white2: "",
+    x: "",
+    y: "",
+    omegaruby: "",
+    alphasapphire: "",
+    sun: "",
+    moon: "",
+    ultrasun: "",
+    ultramoon: "",
+    sword: "",
+    shield: ""
+};
+

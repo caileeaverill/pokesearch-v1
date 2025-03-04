@@ -3,11 +3,14 @@ import { useParams } from "react-router-dom";
 import { PokemonProvider } from "../context/PokemonContext";
 import { fetchEndpointData } from "../services/fetch";
 import Loader from "../components/Loader/Loader";
+
+import GameAppearancesCard from "../components/Cards/GameApperancesCard"
 import TypeCard from "../components/Cards/TypeCard";
 import SpritesCard from "../components/Cards/SpritesCard";
 import StatsCard from "../components/Cards/StatsCard";
 import CryCard from "../components/Cards/CryCard";
 import PhysicalAttributesCard from "../components/Cards/PhysicalAttributesCard";
+
 import { GiBabyBottle, GiUnicorn, GiCrown } from "react-icons/gi";
 
 export default function PokemonDetail() {
@@ -50,6 +53,10 @@ export default function PokemonDetail() {
         toolTipText = "Baby";
     }
 
+    const englishFlavorTexts = species.flavor_text_entries
+        .filter(entry => entry.language.name === 'en')
+        .map(entry => entry.flavor_text);
+
     return (
         <PokemonProvider pokemonData={pokemon} speciesData={species}>
             <div className="flex items-center gap-4 text-white my-6">
@@ -60,13 +67,18 @@ export default function PokemonDetail() {
                 <h1 className="text-2xl font-bold text-white capitalize">
                     {`#${pokemon.name}`}
                 </h1>
+                {/* get the first flavor text in english only */}
+                <span>
+                    {
+                        // englishFlavorTexts
+                    }
+                </span>
             </div>
             <div className="grid gap-4">
 
                 <div className="grid gap-4 text-white grid-cols-1 md:grid-cols-2">
                     <SpritesCard className="col-span-1" />
-                    <div className="flex flex-col gap-4">
-                    </div>
+                    <GameAppearancesCard className="col-span-1" />
                 </div>
 
                 <div className="grid gap-4 text-white grid-cols-1 lg:grid-cols-4">

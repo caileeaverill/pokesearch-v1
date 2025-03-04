@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { PiSpeakerSimpleHigh } from "react-icons/pi";
 import { usePokemon } from "../../context/PokemonContext";
 
-export default function GameAppearancesCard({ className = "" }) {
+export default function CryCard({ className = "" }) {
     const { pokemon } = usePokemon();
     const cryUrl = pokemon.cries.latest;
     const [isPlaying, setIsPlaying] = useState(false);

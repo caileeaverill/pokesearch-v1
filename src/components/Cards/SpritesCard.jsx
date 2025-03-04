@@ -46,7 +46,7 @@ export default function SpriteCard({ className = "" }) {
 
     return (
         <div className={`bg-neutral-900 p-4 flex ${className}`}>
-            <div className="flex flex-col justify-center gap-4 pr-8 mr-8 border-r border-neutral-800">
+            <div className="flex flex-col justify-center gap-4 pr-16 mr-8 border-r border-neutral-800">
                 {spriteKeys.map((key, index) => (
                     <button
                         key={index}

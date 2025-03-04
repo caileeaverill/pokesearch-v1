@@ -40,7 +40,7 @@ export default function StatsCard({ className = "" }) {
 
         setTimeout(() => {
             clearInterval(interval);
-        }, 700);
+        }, 300);
 
         return () => clearInterval(interval);
     }, [pokemon.stats]);
@@ -63,7 +63,7 @@ export default function StatsCard({ className = "" }) {
                             <div className="flex w-full items-center gap-2">
                                 <div className="relative flex-1 h-4 bg-neutral-700 rounded-full">
                                     <div
-                                        className={`h-full rounded-full text-xs text-white font-bold text-right px-2 transition-all duration-1000 ease-in-out ${statColor}`}
+                                        className={`h-full rounded-full text-xs text-white font-bold text-right px-2 transition-all duration-2000 ease-in-out ${statColor}`}
                                         style={{ width: `${animatedWidth}%` }}
                                     >
                                     </div>

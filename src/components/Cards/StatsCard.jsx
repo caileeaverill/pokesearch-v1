@@ -68,7 +68,7 @@ export default function StatsCard({ className = "" }) {
                                     >
                                     </div>
                                 </div>
-                                <p className="w-12 text-center">{stat.base_stat}</p>
+                                <p className="w-6 text-center">{stat.base_stat}</p>
                             </div>
                         </div>
                     );

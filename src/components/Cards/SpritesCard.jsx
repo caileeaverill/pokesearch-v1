@@ -39,7 +39,6 @@ export default function SpriteCard({ className = "" }) {
         },
     ];
 
-    // Filter out null values
     const validSprites = chosenSprites.filter((sprite) => sprite.value);
     const spriteKeys = validSprites.map((sprite) => sprite.key);
     const spriteValues = validSprites.map((sprite) => sprite.value);
@@ -61,7 +60,7 @@ export default function SpriteCard({ className = "" }) {
                     </button>
                 ))}
             </div>
-            <div className="relative m-auto h-[350px] w-[350px] flex items-center justify-center group">
+            <div className="relative m-auto h-[350px] w-[350px] flex items-center justify-center group overflow-hidden">
                 {spriteValues.length > 0 ? (
                     <img
                         key={selectedIndex}

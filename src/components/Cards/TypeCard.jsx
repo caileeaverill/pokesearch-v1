@@ -32,7 +32,7 @@ export default function PokedexDataCard({ className = "" }) {
                         <div key={index} className="flex flex-wrap items-center flex-none w-full gap-4">
                             <div className="relative group">
                                 <Icon className="w-10 h-10 mr-2" />
-                                <span className="absolute left-1/2 top-full mb-2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 transition-opacity duration-300 group-hover:opacity-100 whitespace-nowrap">
+                                <span className="absolute left-1/2 top-full mb-2 -translate-x-1/2 bg-zinc-700 text-white text-xs px-2 py-1 rounded opacity-0 transition-opacity duration-300 group-hover:opacity-100 whitespace-nowrap">
                                     {relationshipType.replace(/([A-Z])/g, " $1").toLowerCase().replace(/^./, (str) => str.toUpperCase())}
                                 </span>
                             </div>

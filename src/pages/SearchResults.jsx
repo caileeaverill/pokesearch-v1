@@ -45,7 +45,7 @@ export default function SearchResults() {
         }, []);
 
         return (
-            <div className="flex gap-4 flex-wrap justify-center">
+            <div className="flex gap-4 flex-wrap justify-center pt-8">
                 {isLoading ? (
                     <Loader loadedCount={loadedCount} totalCount={numOfCards} />
                 ) : (

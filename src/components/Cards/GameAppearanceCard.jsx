@@ -29,7 +29,7 @@ export default function GameAppearanceCard({ className = "" }) {
                     gameVersions.length > 0 ? (
                         gameVersions.map((game, index) => (
                             <div key={index} className="">
-                                <div className="w-10 h-10 rounded-full mx-auto" style={{ backgroundColor: setPokemonGameVersionStyles(game) }} />
+                                <div className="w-10 h-10 rounded-full mx-auto" style={{ backgroundColor: setPokemonGameVersionStyles(gameVersionsObj[index]) }} />
                                 <h6 className="text-center capitalize">{game}</h6>
                             </div>
                         ))
